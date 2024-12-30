@@ -116,7 +116,7 @@ export default function Countdown() {
         </>
       ) : (
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-[Poppins] uppercase">{TARGET_YEAR} Count Down</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-[Poppins] uppercase">{TARGET_YEAR} Countdown</h1>
           <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-8 font-[Poppins] uppercase tracking-widest">Philippines {DEBUG ? "(Test)" : ""}</h3>
           <div className="font-mono flex flex-row justify-self-center">
             <TimerDisplay value={days} label="day" />
