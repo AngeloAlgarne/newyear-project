@@ -48,4 +48,7 @@ This is a Next.js app built using TypeScript, Tailwind CSS, and the App Router, 
 - The app uses the **App Router** in Next.js for routing.
 - The fireworks feature (canvas-confetti) is triggered based on the target date and will be visible on the screen once the countdown hits zero.
 
----
+## License
+
+This project is open-source and available under the MIT License.
+
