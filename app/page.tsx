@@ -6,7 +6,7 @@ import confetti from "canvas-confetti";
 import TimerDisplay from "./components/TimerDisplay";
 
 
-const DEBUG =  true;
+const DEBUG = false;
 
 
 const TARGET_DATETIME = getCurrentTarget(); 
@@ -14,11 +14,16 @@ const TARGET_YEAR = TARGET_DATETIME.getFullYear();
 
 
 function getCurrentTarget() {
-  let targetDate = "2024-12-31"; // default is debug values
-  let targetTime = "02:15:00";
+  let targetDate = "2024-12-31"; // Default is debug values
+  let targetTime = "03:00:00";
   if (!DEBUG) {
-    const now = new Date();
-    targetDate = now.getFullYear() + "-01-01";
+    // TODO: dynamic new year
+    // const now = new Date();
+    // let newYear = now.getFullYear() + 1;
+    // if (now.getMonth() == 12) {
+    //   newYear = now.getFullYear();
+    // }
+    targetDate = "2025-01-01";
     targetTime = "00:00:00";
   }
   return new Date(targetDate + "T" + targetTime + "+08:00"); // Asia/Manila tz
@@ -60,11 +65,11 @@ export default function Countdown() {
   // Fireworks/Confetti settings
   useEffect(() => {
     if (showFireworks && canvasRef.current) {
-      const canvas = canvasRef.current;
+      // const canvas = canvasRef.current;
 
       let end = Date.now() + 10 * 1000; // Debug default vaue
       if (!DEBUG) {
-        let newDate = new Date(TARGET_DATETIME)
+        const newDate = new Date(TARGET_DATETIME)
         end = newDate.setMonth(newDate.getMonth() + 1);
       }
 
