@@ -1,7 +1,3 @@
-Here’s a sample README for your project based on your objectives:
-
----
-
 # New Year Countdown with Fireworks
 
 This is a Next.js app built using TypeScript, Tailwind CSS, and the App Router, designed to display a large countdown to the New Year (January 1, 2025, 12:00 AM, Asia/Manila Time Zone). Once the countdown reaches zero, fireworks will appear. The fireworks feature is testable via a configurable variable that can be adjusted for testing purposes.
