@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import confetti from "canvas-confetti";
 
 import TimerDisplay from "./components/TimerDisplay";
-
+import Footer from "./components/Footer";
 
 const DEBUG = false;
 
@@ -126,6 +126,7 @@ export default function Countdown() {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
