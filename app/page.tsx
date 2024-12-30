@@ -1,4 +1,4 @@
-"use client"; // Add this directive for client component
+"use client";
 
 import { useEffect, useState, useRef } from "react";
 import confetti from "canvas-confetti";
@@ -62,9 +62,11 @@ export default function Countdown() {
     if (showFireworks && canvasRef.current) {
       const canvas = canvasRef.current;
 
-      const seconds = 2678400; // Fireworks duration (31 days lol)
-      const duration = seconds * 1000;
-      const end = Date.now() + duration;
+      let end = Date.now() + 10 * 1000; // Debug default vaue
+      if (!DEBUG) {
+        let newDate = new Date(TARGET_DATETIME)
+        end = newDate.setMonth(newDate.getMonth() + 1);
+      }
 
       const interval = setInterval(() => {
         if (Date.now() > end) {
